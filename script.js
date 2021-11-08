@@ -7,6 +7,7 @@ let addPanelistBtn;
 let removePanelistBtn;
 let panel; 
 let panelistButton;
+let beginPanelButton;
 let voiceBox; 
 
 function preload() {
@@ -17,6 +18,13 @@ function preload() {
 
 function setup() {
   noCanvas();
+  beginPanelButton = createButton('Begin Panel');
+  beginPanelButton.position(20, 20);
+  beginPanelButton.mousePressed(beginPanel)
+}
+
+function beginPanel() {
+  beginPanelButton.remove();
   voiceBox.interrupt = true;
   topics = Object.values(topicsJSON);
   panel = new Panel();
