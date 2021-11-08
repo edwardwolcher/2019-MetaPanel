@@ -1,6 +1,7 @@
 const goodVoices = [0, 7, 10, 17, 20, 26, 28, 32, 36, 37, 40, 49, 50, 51]
 const initialPanelists = 3;
-let globalPatience = 7;
+let initialPatience = 7;
+let patienceSlider;
 let topicsJSON;
 let topics;
 let addPanelistBtn;
@@ -38,6 +39,11 @@ function beginPanel() {
   removePanelistBtn.mousePressed(() => {
     panel.removePanelist();
   });
+  patienceSlider = createSlider(2,12,7,1);
+  patienceSlider.position(350,10);
+  const sliderLabel = createSpan('Patience:');
+  sliderLabel.class("sliderLabel");
+  sliderLabel.position(240,10)
   for (let i = 0; i < initialPanelists; i++) {
     panel.addPanelist();
   }
@@ -83,7 +89,7 @@ class Panel {
       if (p !== this.speaker) {
           p.impatience++;
       }
-      const interrupt = random(globalPatience)
+      const interrupt = random(patienceSlider.value())
       if (interrupt < p.impatience) {
         this.speaker.impatience = 0;
         this.speaker.img.removeClass('speaking')
