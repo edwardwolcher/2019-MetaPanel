@@ -15,3 +15,5 @@ This is an experimental prototype that's part of a larger project I'm informally
 ## Code Explanation 
 
 The code implementing the logic of the site and its UI is in the `script.js`file. The python script `process_topics.py` is a simple script to parse the large volume of generated text by topic into a JSON file that can be easily read by the Javascript program. Raw text from the gpt2 model is in the topics folder. Raw images from the GAN are in the images folder.
+
+The site itself is still running a bit buggy and works best in Chrome. If the text appears stuck try adding or removing a panelist or reloading the page. 
