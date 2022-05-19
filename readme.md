@@ -1,5 +1,9 @@
 # 2019 Meta-Panel
 
+## Live Demo
+
+Live demo here: [https://edwardwolcher.github.io/2019-MetaPanel/](https://edwardwolcher.github.io/2019-MetaPanel/) (works in chrome, but not other browsers, based on my testing)
+
 ## Overview
 
 This project is an artistic experiment in an autonomous generative textual work using NLP. It is based on the ubiquitous model of the "panel discussion", and presents a modular algorithmic panel which can be expanded and modulated by a user. The result is a wash of semi-coherent conversation that emulates the most frustrating qualities of actual panel discussions while providing a critical lens onto the form and content of public intellectual discussion.
